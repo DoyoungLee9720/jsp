@@ -90,4 +90,28 @@
     	maxIdle = "13"
     	maxWaitMillis = "3000"
     />
+    <Resource
+    	name = "jdbc/jboard"
+    	auth = "Container"
+    	type = "javax.sql.DataSource"
+    	driverClassName = "com.mysql.cj.jdbc.Driver"
+    	url = "jdbc:mysql://127.0.0.1:3306/jboard"
+    	username = "jboard"
+    	password = "1234"
+    	maxTotal = "13"
+    	maxIdle = "13"
+    	maxWaitMillis = "3000"
+    />
+    <Resource
+    name = "jdbc/board"
+    auth = "Container"
+    type = "javax.sql.DataSource"
+    driverClassName = "com.mysql.cj.jdbc.Driver"
+    url = "jdbc:mysql://127.0.0.1:3306/board"
+    username = "jboard"
+    password = "1234"
+    maxTotal = "13"
+    maxIdle = "13"
+    maxWaitMillis = "3000"
+/>
 </Context>
