@@ -148,8 +148,8 @@ public class ArticleDao extends DBHelper {
 		
 	}	
 	
-	public void deleteArticle(int no) {
-		
+	public int deleteArticle(String no) {
+		return 0;
 	}
 	public void updateHitCount(String no) {
 		try {

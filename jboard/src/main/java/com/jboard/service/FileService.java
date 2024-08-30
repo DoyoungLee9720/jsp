@@ -40,8 +40,8 @@ public enum FileService {
 	public void updatetFile(FileDto dto) {
 		dao.updatetFile(dto);
 	}
-	public void deletetFile(int fno) {
-		dao.deletetFile(fno);
+	public int deletetFile(String ano) {
+		return dao.deletetFile(ano);
 	}
 	public void updateFileDownloadCount(String fno) {
 		dao.updateFileDownloadCount(fno);

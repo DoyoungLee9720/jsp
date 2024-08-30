@@ -71,6 +71,20 @@ public class FileDao extends DBHelper{
 			closeAll();
 		}
 	}
-	public void deletetFile(int fno) {}
+	public int deletetFile(String ano) {
+		int result = 0;
+		try{
+			conn = getConnection();
+			psmt = conn.prepareStatement(SQL.DELETE_FILE);
+			psmt.setString(1, ano);
+			result = psmt.executeUpdate();
+			
+		}catch (Exception e) {
+			logger.error(e.getMessage());
+		}finally {
+			closeAll();
+		}
+		return result;
+	}
 	
 }

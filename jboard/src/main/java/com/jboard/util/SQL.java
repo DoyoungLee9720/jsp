@@ -52,13 +52,16 @@ public class SQL {
 													+ "JOIN `user` AS b ON a.writer = b.uid "
 													+ "WHERE `parent` = ?;";
 	public static final String INSERT_COMMENT = "INSERT into comment set "
-												+ "`parent`=?, "
-												+ "`content`=?, "
-												+ "`writer`=?, "
-												+ "`regip`=?, "
-												+ "`rdate`=now() ";
+											+ "`parent`=?, "
+											+ "`content`=?, "
+											+ "`writer`=?, "
+											+ "`regip`=?, "
+											+ "`rdate`=now() ";
+	public static final String UPDATE_COMMENT = "UPDATE `comment` set `content`=? where `no` = ?";
+	public static final String DELETE_COMMENT = "DELETE FROM `comment` where `no`=?";
 	//file
-	public static final String SELECT_FILE ="SELECT * FROM `file` where `fno`=?";
+	public static final String DELETE_FILE = "DELETE FROM `file` where `ano`=?";
+	public static final String SELECT_FILE = "SELECT * FROM `file` where `fno`=?";
 	public static final String INSERT_FILE = "insert into file set "
 											+ "`ano`=?,"
 											+ "`oName` = ?,"

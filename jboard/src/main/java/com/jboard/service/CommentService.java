@@ -17,10 +17,10 @@ public enum CommentService {
 	public List<CommentDto> selectComments(String parent) {
 		return dao.selectComments(parent);
 	}
-	public void updateComment(CommentDto dto) {
-		dao.updateComment(dto);
+	public int updateComment(CommentDto dto) {
+		return dao.updateComment(dto);
 	}
-	public void deleteComment(int no) {
-		dao.deleteComment(no);
+	public int deleteComment(String no) {
+		return dao.deleteComment(no);
 	}
 }

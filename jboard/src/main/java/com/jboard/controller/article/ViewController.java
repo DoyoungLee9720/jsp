@@ -23,7 +23,7 @@ public class ViewController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private ArticleService service = ArticleService.INSTANCE;
 	//private FileService fileservice = FileService.INSTANCE;
-	private CommentService commentservice = CommentService.INSTANCE;
+	private CommentService commentService = CommentService.INSTANCE;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String no = req.getParameter("no");
@@ -36,7 +36,7 @@ public class ViewController extends HttpServlet {
 		//파일 조회
 		//List<FileDto> fileDto = fileservice.selectFiles(no);
 		//댓글 조회
-		List<CommentDto> comments = commentservice.selectComments(no);
+		List<CommentDto> comments = commentService.selectComments(no);
 		
 		//공유 참조
 		req.setAttribute("articleDto", articleDto);

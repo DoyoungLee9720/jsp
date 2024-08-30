@@ -23,6 +23,9 @@ public class CommentDto {
 	public void setNo(int no) {
 		this.no = no;
 	}
+	public void setNo(String no) {
+		this.no = Integer.parseInt(no);
+	}
 	public int getParent() {
 		return parent;
 	}
@@ -56,16 +59,13 @@ public class CommentDto {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-	public void setRdateSubString(String rdate) {
-		this.rdate = rdate.substring(0,10);
+	public void setRdateSubstring(String rdate) {
+		this.rdate = rdate.substring(0, 10);
 	}
 	@Override
 	public String toString() {
 		return "CommentDto [no=" + no + ", parent=" + parent + ", content=" + content + ", writer=" + writer
-				+ ", regip=" + regip + ", rdate=" + rdate + ", getNo()=" + getNo() + ", getParent()=" + getParent()
-				+ ", getContent()=" + getContent() + ", getWriter()=" + getWriter() + ", getRegip()=" + getRegip()
-				+ ", getRdate()=" + getRdate() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+				+ ", regip=" + regip + ", rdate=" + rdate + "]";
 	}
 	
 	
