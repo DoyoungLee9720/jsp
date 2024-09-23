@@ -93,11 +93,11 @@ window.onload = function(){
 	registerForm.name.addEventListener('focusout', function(){
 		
 		const name = registerForm.name.value;
-		
 		if(!name.match(reName)){
 			resultName.innerText = "이름이 유효하지 않습니다.";
 			resultName.style.color = 'red';
 			isNameOk = false;
+			
 		}else{
 			resultName.innerText = "";
 			isNameOk = true;
@@ -270,5 +270,4 @@ window.onload = function(){
 		
 		return true; // 폼 전송
 	}
-	
 }

@@ -38,7 +38,7 @@ public class DeleteController extends HttpServlet{
 		
 		//JSON 생성/출력
 		JsonObject json = new JsonObject();
-		json.addProperty("result", result);
+		//json.addProperty("result", result);
 		
 		PrintWriter writer = resp.getWriter();
 		writer.print(json);

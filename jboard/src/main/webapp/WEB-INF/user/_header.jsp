@@ -10,6 +10,6 @@
 <body>
     <div id="container">
         <header>
-            <h3>Board System v1.0</h3>
+            <h3>Board System v0.0.1</h3>
         </header>
         
